@@ -8,7 +8,9 @@ function App() {
   }
   function handleMouseover() {
     setMouseOver(true);
-    console.log("over");
+  }
+  function handleMouseLeave() {
+    setMouseOver(false);
   }
 
   return (
@@ -18,6 +20,7 @@ function App() {
       <button
         style={{ backgroundColor: isMouseOver ? "black" : "white" }}
         onMouseOver={handleMouseover}
+        onMouseLeave={handleMouseLeave}
         onClick={handleClick}
       >
         Submit
